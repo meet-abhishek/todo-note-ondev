@@ -20,6 +20,7 @@ body {
 
 #container {
   height: 100vh;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -226,4 +227,11 @@ ul {
   font-size: 16px;
   background-color: #07437f;
   color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  #container {
+    height: 100vh;
+    width: 100vw;
+  }
 }
