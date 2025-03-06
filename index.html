@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/note.css" />
+    <link rel="stylesheet" href="./src/modal.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="formTodoContainer">
+        <form id="todoForm">
+          <div class="title-div">
+            <!-- <label for="todoTitle" class="todo-title-label">Task: </label> -->
+            <input
+              type="text"
+              id="todoTitle"
+              class="todo-title-input"
+              name="todoTitle"
+              placeholder="Add your task"
+              required
+            />
+          </div>
+
+          <div id="descriptionSlider" class="description-slider">
+            <!-- <label for="dueDate">Due Date: </label> -->
+            <input type="date" id="dueDate" name="dueDate" />
+
+            <div class="desc-ta-cat-pri">
+              <div class="description-tags">
+                <!-- <label for="description">Description: </label> -->
+                <textarea
+                  id="description"
+                  name="description"
+                  placeholder="write description"
+                ></textarea>
+                <!-- <label for="tags">Add Tags: </label> -->
+                <input
+                  type="text"
+                  id="tags"
+                  name="tags"
+                  placeholder="Add comma or space seperated tags"
+                />
+              </div>
+
+              <div class="category-priority">
+                <!-- <label for="priority">Priority: </label> -->
+                <select name="priority" id="priority">
+                  <option value="default" selected disabled>-Priority-</option>
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
+                </select>
+
+                <!-- <label for="category">Category: </label> -->
+                <select name="category" id="category">
+                  <option value="default" selected disabled>-Category-</option>
+                  <option value="work">Work</option>
+                  <option value="personal">Personal</option>
+                  <option value="others">Others</option>
+                </select>
+
+                <button type="button" id="newCategoryBtn">New Category</button>
+              </div>
+            </div>
+
+            <!------------------------ Modal Structure ----------------------------->
+            <div id="categoryModal" class="category-modal">
+              <div id="modalContent" class="category-modal-content">
+                <span id="closeCategoryModal" class="close-category-modal"
+                  >&times;</span
+                >
+                <!-- <h4 class="category-modal-title">Add a New Category</h4> -->
+                <input
+                  type="text"
+                  id="categoryModalInput"
+                  class="category-modal-input"
+                  placeholder="Enter category name"
+                />
+                <button id="addCategoryBtn" class="add-category-btn">
+                  Add
+                </button>
+              </div>
+            </div>
+
+            <!------------------------ Modal Structure ----------------------------->
+
+            <button type="submit" id="todoBtn">Add</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- --------------------------------------------------------------------------- -->
+
+      <div id="formNoteContainer">
+        <form id="noteForm">
+          <div class="note-input">
+            <!-- <label for="noteInput">Note: </label> -->
+            <input type="text" id="noteInput" placeholder="Add note(Thank you for your patience)" />
+          </div>
+
+          <div class="note-btns">
+            <button type="submit" id="noteBtn">Add Note</button>
+            <br />
+            <button type="button" id="noteOpenBtn">Open Note</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- ----------------------------------------------------------------------------------- -->
+
+      <div id="todoContainer"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

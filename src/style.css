@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #07437f;
+  font-size: 12px;
+}
+
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  /* background-color: #0F87FF; */
+}
+
+#todoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 100%;
+  background-color: #5dacfc;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+
+.title-div {
+  display: flex;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.description-slider {
+  display: none;
+}
+
+.description-slider-show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.desc-ta-cat-pri {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+
+.description-tags {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 14px;
+}
+
+#description {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  padding: 0.3rem;
+  border-radius: 0.1rem;
+  text-align: center;
+}
+
+.category-priority {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+input[type="text"] {
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 0.1rem;
+  text-align: center;
+  width: 100%;
+}
+
+input[name="tags"] {
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 0.1rem;
+}
+
+input[type="date"] {
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 0.1rem;
+  text-align: center;
+  width: 100%;
+}
+
+select {
+  background-color: #ffffff;
+  padding: 0.3rem;
+  border-radius: 0.1rem;
+  text-align: center;
+}
+
+button {
+  background-color: #337fff;
+  color: #fff;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 0.1rem;
+  cursor: pointer;
+}
+
+/* *****************TASKS RENDERED****************** */
+
+#todoContainer {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background-color: #7dbeff;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+#todoContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+#taskDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #07437f;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  color: #fff;
+  list-style: none;
+  width: 100%;
+  border-radius: 0rem;
+  padding: 0.3rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  list-style: none;
+  width: 100%;
+  background-color: #7bbcfc;
+}
+
+.propertyDiv {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  background-color: #5dacfc;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.showPropertyDiv {
+  display: flex;
+}
+
+#resultDueDate {
+  margin-left: 15px;
+  font-size: 0.7rem;
+  background-color: #369fff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+
+.editBtn,
+.deleteBtn {
+  background-color: #369fff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#anEditTitle {
+  text-align: center;
+  padding: 0.3rem;
+  font-size: 16px;
+  background-color: #07437f;
+  color: white;
+}

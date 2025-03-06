@@ -1,0 +1,60 @@
+.category-modal {
+  display: none; /* Hidden by default */
+  position: relative;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  background-color: #07437F;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.category-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  min-width: 300px;
+  text-align: center;
+}
+
+/* Modal Content Box */
+.category-modal-input {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+
+  text-align: center;
+}
+
+.category-modal-input::placeholder {
+  color: #000000;
+}
+
+/* Close Button */
+.close-category-modal {
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+  color: #369fff;
+}
+
+.category-modal-title {
+  
+  color: #369fff;
+}
+
+.add-category-btn {
+  background-color: #369fff;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
